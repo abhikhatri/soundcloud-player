@@ -82,6 +82,26 @@ body{
   outline: 0;
 }
 
+.sc-progress-bar{
+  font-size: 0;
+  background-color: #787D83;
+  height: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.sc-progress-bar:hover{
+ height: 8px; 
+}
+
+#sc-progress-fill{
+  display: inline-block;
+  height: 100%;
+  background: #F66E38;
+  transition: all 0.3s ease;
+}
 
 .sc-controls{
   padding: 0;
@@ -89,7 +109,6 @@ body{
   text-align: center;
   height: 54px;
   display: flex;
-  border-top: 1px solid #393E42;
 }
 
 .sc-control-item{
