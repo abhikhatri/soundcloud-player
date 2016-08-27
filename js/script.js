@@ -13,7 +13,6 @@ $(document).ready(function(){
   
   var updatePosition = function(currentTrack){
     var currentPosition = currentTrack.currentTime();
-    console.log('Current: '+ currentPosition);
     $("#sc-progress-fill").css('width', ((currentPosition / trackDuration) * 100) + '%');
   };
 
@@ -44,16 +43,24 @@ $(document).ready(function(){
       clearInterval(progressTracker);
     });
 
+    player.on('play', function(){
+      $('.sc-progress-bar').on('click', function(event){
+        var x = event.pageX - $(this).offset().left;
+        var width = $(this).width();
+        player.seek((x / width) * trackDuration);
+        updatePosition(player);
+        $('#mediaBtn').addClass('buffering');
+      });
+    });
+
+    player.on('seeked', function(){
+      clearInterval(progressTracker);
+      $('#mediaBtn').removeClass('buffering');
+    });
+
     player.on('finish', function(){
       clearInterval(progressTracker);
       $('#mediaBtn').removeClass('playing').addClass('paused');
-    });
-
-    $('.sc-progress-bar').on('click', function(event){
-      var x = event.pageX - $(this).offset().left;
-      var width = $(this).width();
-      player.seek((x / width) * trackDuration);
-      updatePosition(player);
     });
 
   });

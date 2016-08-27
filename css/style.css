@@ -77,6 +77,12 @@ body{
  background-size: 15px;
 }
 
+#mediaBtn.playing.buffering,
+#mediaBtn.paused.buffering{
+ background: url('../img/buffering.gif') center center no-repeat, #FF5500; 
+ background-size: 24px;
+}
+
 .sc-media-btn:focus,
 .sc-media-btn:active{
   outline: 0;
