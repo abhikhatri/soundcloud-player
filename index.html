@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Include SDK - Using SoundCloud API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+
+    <div id="player" class="sc-player">
+      <div class="sc-header">
+        <a href="https://soundcloud.com" target="_blank">
+          <img src="img/sc-logo.svg" alt="SoundCloud Logo" class="sc-logo">
+        </a>
+      </div>
+
+      <div id="sc-artwork">
+        <button id="mediaBtn" class="sc-media-btn paused">
+        </button>
+      </div>
+
+      <ul class="sc-controls">
+        <li class="sc-control-item" id="playsCount">
+          <img src="img/play-icon.svg" alt="Play Icon" class="sc-control-icon">
+
+        </li>
+        <li class="sc-control-item" id="likesCount">
+          <img src="img/like-icon.svg" alt="Like Icon" class="sc-control-icon">
+
+        </li>
+        <li class="sc-control-item" id="commentsCount">
+          <img src="img/comment-icon.svg" alt="Comment Icon" class="sc-control-icon">
+        </li>
+      </ul>
+    </div>
+
+  </body>
+</html>

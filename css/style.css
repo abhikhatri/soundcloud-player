@@ -1,0 +1,107 @@
+@font-face {
+ font-family: 'interstate';
+ src: url('../fonts/interstate-regular-webfont.eot');
+ src: url('../fonts/interstate-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/interstate-regular-webfont.woff') format('woff'), url('../fonts/interstate-regular-webfont.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  position: relative;
+  font-family: 'interstate', sans-serif;
+}
+
+.sc-player{
+  color: #787D83;
+  display: block;
+  width: 300px;
+  min-height: 408px;
+  background-color: #131417;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.10), 0px 0px 25px 0px rgba(0,0,0,0.10), 0px 0px 20px 0px rgba(0,0,0,0.10);
+}
+
+.sc-header{
+  background-color: #F66E38;
+}
+
+.sc-logo{
+  display: inline-block;
+  height: 30px;
+  padding: 10px 0;
+}
+
+#sc-artwork{
+  height: 300px;
+  position: relative;
+}
+
+.sc-media-btn{
+  background: #FF5500;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#mediaBtn.paused{
+  background: url('../img/play-btn-icon.svg') center center no-repeat, #FF5500;
+  background-size: 15px;
+}
+
+#mediaBtn.playing{
+ background: url('../img/paused-btn-icon.svg') center center no-repeat, #FF5500; 
+ background-size: 15px;
+}
+
+.sc-media-btn:focus,
+.sc-media-btn:active{
+  outline: 0;
+}
+
+
+.sc-controls{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  height: 54px;
+  display: flex;
+  border-top: 1px solid #393E42;
+}
+
+.sc-control-item{
+  list-style: none;
+  flex: 1;
+  line-height: 3.5em;
+  border-right: 1px solid #393E42;
+  padding: 0 10px;
+}
+
+.sc-control-icon{
+  margin-right: 5px;
+  height: 15px;
+  vertical-align: text-top;
+}
