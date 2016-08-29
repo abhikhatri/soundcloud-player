@@ -12,7 +12,7 @@ $(document).ready(function(){
   var trackDuration;
   
   var updatePosition = function(currentTrack){
-    var currentPosition = currentTrack.currentTime();
+    console.log(currentPosition);
     $("#sc-progress-fill").css('width', ((currentPosition / trackDuration) * 100) + '%');
   };
 
@@ -50,11 +50,13 @@ $(document).ready(function(){
         var width = $(this).width();
         player.seek((x / width) * trackDuration);
         updatePosition(player);
+        clearInterval(progressTracker);
         $('#mediaBtn').addClass('buffering');
       });
     });
 
     player.on('seeked', function(){
+      progressTracker = setInterval( function(){ updatePosition(player); }, 1000);
       $('#mediaBtn').removeClass('buffering');
     });
 
