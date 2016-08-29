@@ -17,6 +17,7 @@ $(document).ready(function(){
   };
 
   SC.get(TRACK).then(function(track){
+    console.log(track.user);
     trackDuration = track.duration;
     var artwork = track.artwork_url;
     artwork = artwork.replace('-large', '-crop');
@@ -54,7 +55,6 @@ $(document).ready(function(){
     });
 
     player.on('seeked', function(){
-      clearInterval(progressTracker);
       $('#mediaBtn').removeClass('buffering');
     });
 
