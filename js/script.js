@@ -12,7 +12,7 @@ $(document).ready(function(){
   var trackDuration;
   
   var updatePosition = function(currentTrack){
-    console.log(currentPosition);
+    var currentPosition = currentTrack.currentTime();
     $("#sc-progress-fill").css('width', ((currentPosition / trackDuration) * 100) + '%');
   };
 
