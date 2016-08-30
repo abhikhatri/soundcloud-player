@@ -1,6 +1,6 @@
 // initialize soundcloud API with key
 SC.initialize({
-    client_id: "77451b925d14d2b740acdd9826103e2b"
+    client_id: "7ddf6998797d4af24555c97ee1de2894"
 });
 
 // This is the track that will play
@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 
   SC.stream(TRACK).then(function(player){
+    console.log(player);
 
     $('#sc-artwork').on('click', '#mediaBtn.paused', function(){
       $('#mediaBtn').removeClass('paused').addClass('playing');
