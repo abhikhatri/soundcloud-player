@@ -148,12 +148,12 @@ body{
   margin: 10px 0;
 }
 
-.song-cred,
+.sc-cred,
 .design-cred{
   text-decoration: none;
 }
 
-.song-cred{
+.sc-cred{
   color: #F66E38;
 }
 
@@ -161,7 +161,7 @@ body{
   color: #C73B6F;
 }
 
-.song-cred:hover,
+.sc-cred:hover,
 .design-cred:hover{
   text-decoration: underline;
 }
