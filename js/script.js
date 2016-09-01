@@ -3,10 +3,10 @@ SC.initialize({
     client_id: "7ddf6998797d4af24555c97ee1de2894"
 });
 
-// This is the track that will play
-var TRACK = "/tracks/278556380";
-
 $(document).ready(function(){
+  
+  // This is the track that will play
+  var TRACK = "/tracks/278556380";
 
   var progressTracker;
   var trackDuration;
@@ -17,7 +17,6 @@ $(document).ready(function(){
   };
 
   SC.get(TRACK).then(function(track){
-    console.log(track.user);
     trackDuration = track.duration;
     var artwork = track.artwork_url;
     artwork = artwork.replace('-large', '-crop');
@@ -29,10 +28,7 @@ $(document).ready(function(){
 
   });
 
-
   SC.stream(TRACK).then(function(player){
-    console.log(player);
-
     $('#sc-artwork').on('click', '#mediaBtn.paused', function(){
       $('#mediaBtn').removeClass('paused').addClass('playing');
       player.play();
