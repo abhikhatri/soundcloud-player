@@ -6,7 +6,7 @@ SC.initialize({
 $(document).ready(function(){
   
   // This is the track that will play
-  var TRACK = "/tracks/278556380";
+  var TRACK = "/tracks/165098282";
 
   var progressTracker;
   var trackDuration;
